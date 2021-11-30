@@ -30,17 +30,16 @@ public class Menu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jbtn_volver = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jmi_listarJuego = new javax.swing.JMenuItem();
         jmi_agregarJuego = new javax.swing.JMenuItem();
         jmi_actualizarJuego = new javax.swing.JMenuItem();
-        jmi_listarJuego = new javax.swing.JMenuItem();
         jmi_eliminarJuego = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mi Programa");
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
@@ -51,13 +50,6 @@ public class Menu extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Lucida Console", 1, 14)); // NOI18N
         jLabel2.setText("PÁGINA DE VIDEOJUEGOS");
 
-        jbtn_volver.setText("volver");
-        jbtn_volver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtn_volverActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -67,13 +59,8 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(67, 67, 67))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(159, 159, 159)
-                        .addComponent(jbtn_volver)))
+                .addGap(92, 92, 92)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(109, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -83,12 +70,18 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jbtn_volver)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         jMenu1.setText("Opciones");
+
+        jmi_listarJuego.setText("Listar");
+        jmi_listarJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_listarJuegoActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmi_listarJuego);
 
         jmi_agregarJuego.setText("Agregar ");
         jmi_agregarJuego.addActionListener(new java.awt.event.ActionListener() {
@@ -105,14 +98,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jmi_actualizarJuego);
-
-        jmi_listarJuego.setText("Listar");
-        jmi_listarJuego.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmi_listarJuegoActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jmi_listarJuego);
 
         jmi_eliminarJuego.setText("Eliminar");
         jmi_eliminarJuego.addActionListener(new java.awt.event.ActionListener() {
@@ -154,12 +139,9 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-       dispose();
+       System.exit(0);
+      
     }//GEN-LAST:event_jMenuItem6ActionPerformed
-
-    private void jbtn_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_volverActionPerformed
-        dispose();
-    }//GEN-LAST:event_jbtn_volverActionPerformed
 
     private void jmi_agregarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_agregarJuegoActionPerformed
        new AgregarJuego().setVisible(true);
@@ -220,7 +202,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton jbtn_volver;
     private javax.swing.JMenuItem jmi_actualizarJuego;
     private javax.swing.JMenuItem jmi_agregarJuego;
     private javax.swing.JMenuItem jmi_eliminarJuego;

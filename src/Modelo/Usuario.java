@@ -44,7 +44,13 @@ public class Usuario {
     }
     
     
-    
+    public boolean validarUsuario(String nombreUsuario, String contrasena){
+        if (this.nombreUsuario.equalsIgnoreCase(nombreUsuario) && this.contrasena.equals(contrasena)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
     
     
     
